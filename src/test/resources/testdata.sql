@@ -1,0 +1,1 @@
+delete from "songs" where "title"='99 Red Balloons'

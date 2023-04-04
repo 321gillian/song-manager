@@ -1,0 +1,11 @@
+--INSERT INTO "songs" ("id","title","artist","bpm","duration","genre") VALUES (1,'STARSTRUKK (feat. Katy Perry)','3OH!3',140,203,'POP');
+insert into songs (title,artist,bpm,duration,genre) values ('STARSTRUKK (feat. Katy Perry)','3OH!3',140,203,'POP');
+insert into songs (title,artist,bpm,duration,genre) values ('My First Kiss (feat. Ke$ha)','3OH!3',139,192,'POP');
+insert into songs (title,artist,bpm,duration,genre) values ('Over','Drake',100,234,'RAP');
+insert into songs (title,artist,bpm,duration,genre) values ('Not Afraid','Eminem',115,248,'RAP');
+insert into songs (title,artist,bpm,duration,genre) values ('Smells Like Teen Spirit','Nirvana',123,189,'ROCK');
+insert into songs (title,artist,bpm,duration,genre) values ('Wagon Wheel','Nathan Carter',100,210,'COUNTRY');
+insert into songs (title,artist,bpm,duration,genre) values ('Offaly Rover','Brian Whelehan',190,150,'CLASSICAL');
+insert into songs (title,artist,bpm,duration,genre) values ('Rose of Tralee','Anne Doyle',90,250,'FUNK');
+insert into songs (title,artist,bpm,duration,genre) values ('Another One Bites The Dust','Queen',110,230,'ROCK');
+insert into songs (title,artist,bpm,duration,genre) values ('Blanket On The Ground','Mattress Mick',117,102,'COUNTRY');
