@@ -37,7 +37,7 @@ class SongManagerControllerTest {
 		songs.add(buildSong());
 		songs.add(buildSong());
 		when(songService.getAllSongs()).thenReturn(songs);
-		ResponseEntity response = songController.getSongs();
+		ResponseEntity<?> response = songController.getSongs();
 		assertEquals(response.getStatusCode(), HttpStatus.OK);
 		ArrayList<Song> songsReturned = (ArrayList<Song>) response.getBody();
 		assertTrue(songsReturned.equals(songs));
@@ -47,7 +47,7 @@ class SongManagerControllerTest {
 	public void getSongsEmpty() throws Exception {
 		ArrayList<Song> songs = new ArrayList<Song>();
 		when(songService.getAllSongs()).thenReturn(songs);
-		ResponseEntity response = songController.getSongs();
+		ResponseEntity<?> response = songController.getSongs();
 		assertEquals(response.getStatusCode(), HttpStatus.NO_CONTENT);
 		ArrayList<Song> songsReturned = (ArrayList<Song>) response.getBody();
 		assertTrue(songsReturned.equals(songs));
@@ -57,7 +57,7 @@ class SongManagerControllerTest {
 	public void getSongByIdOK() throws Exception {
 		Optional<Song> optSong = Optional.of(buildSong());
 		when(songService.getSongById(1L)).thenReturn(optSong);
-		ResponseEntity response = songController.getSongById(1L);
+		ResponseEntity<?> response = songController.getSongById(1L);
 		assertEquals(response.getStatusCode(), HttpStatus.OK);
 		Optional<Song> songFound = (Optional<Song>) response.getBody();
 		assertTrue(songFound.equals(optSong));
@@ -67,7 +67,7 @@ class SongManagerControllerTest {
 	public void getSongByIdFail() throws Exception {
 		Optional<Song> optSong = Optional.empty();
 		when(songService.getSongById(1L)).thenReturn(optSong);
-		ResponseEntity response = songController.getSongById(1L);
+		ResponseEntity<?> response = songController.getSongById(1L);
 		assertEquals(response.getStatusCode(), HttpStatus.NO_CONTENT);
 		Optional<Song> songFound = (Optional<Song>) response.getBody();
 		assertTrue(songFound.equals(optSong));
@@ -83,7 +83,7 @@ class SongManagerControllerTest {
 		funkSongs.add(funkSong1);
 		funkSongs.add(funkSong2);
 		when(songService.getSongsByGenre(Genre.FUNK)).thenReturn(funkSongs);
-		ResponseEntity response = songController.getSongsByGenre(Genre.FUNK);
+		ResponseEntity<?> response = songController.getSongsByGenre(Genre.FUNK);
 		assertEquals(response.getStatusCode(), HttpStatus.OK);
 		ArrayList<Song> songsReturned = (ArrayList<Song>) response.getBody();
 		assertTrue(songsReturned.equals(funkSongs));
@@ -93,7 +93,7 @@ class SongManagerControllerTest {
 	public void getSongsByGenreEmpty() throws Exception {
 		ArrayList<Song> songs = new ArrayList<Song>();
 		when(songService.getSongsByGenre(Genre.SOUL)).thenReturn(songs);
-		ResponseEntity response = songController.getSongsByGenre(Genre.SOUL);
+		ResponseEntity<?> response = songController.getSongsByGenre(Genre.SOUL);
 		assertEquals(response.getStatusCode(), HttpStatus.NO_CONTENT);
 		ArrayList<Song> songsReturned = (ArrayList<Song>) response.getBody();
 		assertTrue(songsReturned.equals(songs));
@@ -109,7 +109,7 @@ class SongManagerControllerTest {
 		midTempoSongs.add(midTempoSong1);
 		midTempoSongs.add(midTempoSong2);
 		when(songService.getSongsInBPMRange(100, 200)).thenReturn(midTempoSongs);
-		ResponseEntity response = songController.getSongsForBPMRange(100, 200);
+		ResponseEntity<?> response = songController.getSongsForBPMRange(100, 200);
 		assertEquals(response.getStatusCode(), HttpStatus.OK);
 		ArrayList<Song> songsReturned = (ArrayList<Song>) response.getBody();
 		assertTrue(songsReturned.equals(midTempoSongs));
@@ -119,7 +119,7 @@ class SongManagerControllerTest {
 	public void getSongsForBPMRangeEmpty() throws Exception {
 		ArrayList<Song> songs = new ArrayList<Song>();
 		when(songService.getSongsInBPMRange(200, 250)).thenReturn(songs);
-		ResponseEntity response = songController.getSongsForBPMRange(200, 250);
+		ResponseEntity<?> response = songController.getSongsForBPMRange(200, 250);
 		assertEquals(response.getStatusCode(), HttpStatus.NO_CONTENT);
 		ArrayList<Song> songsReturned = (ArrayList<Song>) response.getBody();
 		assertTrue(songsReturned.equals(songs));
@@ -131,7 +131,7 @@ class SongManagerControllerTest {
 		Song savedSong = buildSong();
 		savedSong.setId(1L);
 		when(songService.createSong(song)).thenReturn(savedSong);
-		ResponseEntity response = songController.createSong(song);
+		ResponseEntity<?> response = songController.createSong(song);
 		assertEquals(response.getStatusCode(), HttpStatus.CREATED);
 		Song songAdded = (Song) response.getBody();
 		songAdded.getId();
@@ -145,7 +145,7 @@ class SongManagerControllerTest {
 		Song savedSong = buildSong();
 		savedSong.setId(1L);
 		when(songService.createSong(song)).thenThrow(new SongValidationException(ErrorMessages.EMPTY_FIELDS.getMsg()));
-		ResponseEntity response = songController.createSong(song);
+		ResponseEntity<?> response = songController.createSong(song);
 		assertEquals(response.getStatusCode(), HttpStatus.BAD_REQUEST);
 		ErrorMessage errorMsg = (ErrorMessage) response.getBody();
 		assertEquals(ErrorMessages.EMPTY_FIELDS.getMsg(), errorMsg.getErrorMessage());
@@ -158,7 +158,7 @@ class SongManagerControllerTest {
 		savedSong.setId(1L);
 		when(songService.createSong(song))
 				.thenThrow(new SongValidationException(ErrorMessages.STAIRWAY_DENIED.getMsg()));
-		ResponseEntity response = songController.createSong(song);
+		ResponseEntity<?> response = songController.createSong(song);
 		assertEquals(response.getStatusCode(), HttpStatus.BAD_REQUEST);
 		ErrorMessage errorMsg = (ErrorMessage) response.getBody();
 		assertEquals(ErrorMessages.STAIRWAY_DENIED.getMsg(), errorMsg.getErrorMessage());
@@ -170,7 +170,7 @@ class SongManagerControllerTest {
 		Song savedSong = buildSong();
 		savedSong.setId(1L);
 		when(songService.createSong(song)).thenThrow(new SongValidationException(ErrorMessages.NO_SLOW_SONGS.getMsg()));
-		ResponseEntity response = songController.createSong(song);
+		ResponseEntity<?> response = songController.createSong(song);
 		assertEquals(response.getStatusCode(), HttpStatus.BAD_REQUEST);
 		ErrorMessage errorMsg = (ErrorMessage) response.getBody();
 		assertEquals(ErrorMessages.NO_SLOW_SONGS.getMsg(), errorMsg.getErrorMessage());
@@ -183,7 +183,7 @@ class SongManagerControllerTest {
 		savedSong.setId(1L);
 		when(songService.createSong(song))
 				.thenThrow(new SongValidationException(ErrorMessages.LONGER_THAN_BOHEMIAN_RHAPSODY.getMsg()));
-		ResponseEntity response = songController.createSong(song);
+		ResponseEntity<?> response = songController.createSong(song);
 		assertEquals(response.getStatusCode(), HttpStatus.BAD_REQUEST);
 		ErrorMessage errorMsg = (ErrorMessage) response.getBody();
 		assertEquals(ErrorMessages.LONGER_THAN_BOHEMIAN_RHAPSODY.getMsg(), errorMsg.getErrorMessage());
@@ -191,7 +191,7 @@ class SongManagerControllerTest {
 	
 	@Test
 	public void deleteSongOK() throws Exception {
-		ResponseEntity response = songController.deleteSong(1L);
+		ResponseEntity<?> response = songController.deleteSong(1L);
 		assertEquals(response.getStatusCode(), HttpStatus.OK);
 		assertEquals(response.getBody(), null);
 	}
@@ -199,7 +199,7 @@ class SongManagerControllerTest {
 	@Test
 	public void deleteSongFail() throws Exception {
 		doThrow(new RuntimeException("Exception")).when(songService).deleteSong(1L);
-		ResponseEntity response = songController.deleteSong(1L);
+		ResponseEntity<?> response = songController.deleteSong(1L);
 		assertEquals(response.getStatusCode(), HttpStatus.NOT_FOUND);
 		assertEquals(response.getBody(), null);
 	}
