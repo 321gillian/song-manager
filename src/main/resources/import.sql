@@ -1,5 +1,5 @@
---INSERT INTO "songs" ("id","title","artist","bpm","duration","genre") VALUES (1,'STARSTRUKK (feat. Katy Perry)','3OH!3',140,203,'POP');
-insert into songs (title,artist,bpm,duration,genre) values ('STARSTRUKK (feat. Katy Perry)','3OH!3',140,203,'POP');
+TRUNCATE TABLE SONGS;
+insert into songs (title,artist,bpm,duration,genre) values ('STARSTRUKK feat Katy Perry','3OH3',140.0,203,'POP');
 insert into songs (title,artist,bpm,duration,genre) values ('My First Kiss (feat. Ke$ha)','3OH!3',139,192,'POP');
 insert into songs (title,artist,bpm,duration,genre) values ('Over','Drake',100,234,'RAP');
 insert into songs (title,artist,bpm,duration,genre) values ('Not Afraid','Eminem',115,248,'RAP');

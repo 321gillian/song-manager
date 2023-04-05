@@ -1,0 +1,46 @@
+2023-04-05 17:13:44.417  INFO 36339 --- [main] e.t.s.c.SongManagerControllerTest        : Starting SongManagerControllerTest using Java 11.0.11 on GILLIANS-MBP.station with PID 36339 (started by gillianmiddleton in /Users/gillianmiddleton/Documents/workspace-spring-tool-suite-4-4.16.0.RELEASE/songmanager)
+2023-04-05 17:13:44.418  INFO 36339 --- [main] e.t.s.c.SongManagerControllerTest        : The following 1 profile is active: "dev"
+2023-04-05 17:13:45.121  INFO 36339 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-05 17:13:45.202  INFO 36339 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interfaces.
+2023-04-05 17:13:46.086  INFO 36339 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-05 17:13:46.136  INFO 36339 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-04-05 17:13:46.172  INFO 36339 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-05 17:13:46.281  INFO 36339 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-05 17:13:46.507  INFO 36339 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-05 17:13:46.543  INFO 36339 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-04-05 17:13:47.040  INFO 36339 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'file:/Users/gillianmiddleton/Documents/workspace-spring-tool-suite-4-4.16.0.RELEASE/songmanager/target/classes/import.sql'
+2023-04-05 17:13:47.046  INFO 36339 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-05 17:13:47.055  INFO 36339 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-05 17:13:47.589  WARN 36339 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-05 17:13:47.877  INFO 36339 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-04-05 17:13:48.165  INFO 36339 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-04-05 17:13:48.166  INFO 36339 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-04-05 17:13:48.167  INFO 36339 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-04-05 17:13:48.187  INFO 36339 --- [main] e.t.s.c.SongManagerControllerTest        : Started SongManagerControllerTest in 4.165 seconds (JVM running for 5.253)
+2023-04-05 17:13:48.420  INFO 36339 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-05 17:13:48.422  INFO 36339 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-04-05 17:13:48.428  INFO 36339 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-05 17:13:48.434  INFO 36339 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-05 17:14:23.872  INFO 36410 --- [main] e.t.s.c.SongManagerControllerTest        : Starting SongManagerControllerTest using Java 17.0.4.1 on GILLIANS-MBP.station with PID 36410 (started by gillianmiddleton in /Users/gillianmiddleton/Documents/workspace-spring-tool-suite-4-4.16.0.RELEASE/songmanager)
+2023-04-05 17:14:23.874  INFO 36410 --- [main] e.t.s.c.SongManagerControllerTest        : The following 1 profile is active: "dev"
+2023-04-05 17:14:24.359  INFO 36410 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-05 17:14:24.399  INFO 36410 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
+2023-04-05 17:14:25.141  INFO 36410 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-05 17:14:25.179  INFO 36410 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-04-05 17:14:25.211  INFO 36410 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-05 17:14:25.309  INFO 36410 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-05 17:14:25.482  INFO 36410 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-05 17:14:25.507  INFO 36410 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-04-05 17:14:25.848  INFO 36410 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'file:/Users/gillianmiddleton/Documents/workspace-spring-tool-suite-4-4.16.0.RELEASE/songmanager/target/classes/import.sql'
+2023-04-05 17:14:25.857  INFO 36410 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-05 17:14:25.864  INFO 36410 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-05 17:14:26.350  WARN 36410 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-05 17:14:26.547  INFO 36410 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-04-05 17:14:26.755  INFO 36410 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-04-05 17:14:26.755  INFO 36410 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-04-05 17:14:26.756  INFO 36410 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-04-05 17:14:26.774  INFO 36410 --- [main] e.t.s.c.SongManagerControllerTest        : Started SongManagerControllerTest in 3.165 seconds (JVM running for 4.095)
+2023-04-05 17:14:26.938  INFO 36410 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-05 17:14:26.938  INFO 36410 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-04-05 17:14:26.941  INFO 36410 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-05 17:14:26.944  INFO 36410 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
