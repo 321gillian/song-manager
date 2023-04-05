@@ -12,6 +12,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.jdbc.Sql;
 
 import edu.tus.songmanager.dto.Genre;
 import edu.tus.songmanager.dto.Song;
@@ -34,6 +35,7 @@ class SongManagerAppIT {
 	
 
 	@Test
+	@Sql({ "/testdata.sql" })
 	public void createSongSuccessIntTest() {
 		HttpEntity<Song> request = new HttpEntity<Song>(buildSong(), headers);
 		ResponseEntity<String> response = restTemplate.postForEntity("http://localhost:" + port + "/songs", request,
@@ -42,6 +44,7 @@ class SongManagerAppIT {
 	}
 	
 	@Test
+	@Sql({ "/testdata.sql" })
 	public void createSongEmptyFieldsNotAllowedIntTest() {
 		Song song = buildSong();
 		song.setTitle("");
@@ -52,6 +55,7 @@ class SongManagerAppIT {
 	}
 	
 	@Test
+	@Sql({ "/testdata.sql" })
 	public void createSongSlowSongNotAllowedIntTest() {
 		Song song = buildSong();
 		song.setBPM(76);
@@ -63,6 +67,7 @@ class SongManagerAppIT {
 	
 	
 	@Test
+	@Sql({ "/testdata.sql" })
 	public void createSongStairwayDeniedIntTest() {
 		Song song = buildSong();
 		song.setTitle("Stairway to Heaven");
@@ -74,6 +79,7 @@ class SongManagerAppIT {
 	}
 	
 	@Test
+	@Sql({ "/testdata.sql" })
 	public void createSongNotLongerThanBohemianRhapsodyIntTest() {
 		Song song = buildSong();
 		song.setDuration(500);
@@ -85,11 +91,11 @@ class SongManagerAppIT {
 	
 	Song buildSong() {
 		Song song = new Song();
-		song.setTitle("99 Red Balloons");
-		song.setArtist("Nena");
-		song.setBPM(97);
-		song.setDuration(334);
-		song.setGenre(Genre.POP);
+		song.setTitle("Over");
+		song.setArtist("Drake");
+		song.setBPM(100);
+		song.setDuration(234);
+		song.setGenre(Genre.RAP);
 		return song;
 	}
 }
