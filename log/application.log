@@ -3607,3 +3607,67 @@ You may wish to exclude one of them to ensure predictable runtime behavior
 2023-04-05 18:29:41.326  INFO 43069 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 2023-04-05 18:29:41.329  INFO 43069 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-04-05 18:29:41.332  INFO 43069 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-05 18:40:19.281  WARN 44901 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/gillianmiddleton/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/gillianmiddleton/.m2/repository/org/json/json/20160212/json-20160212.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-05 18:40:19.305  INFO 44901 --- [main] e.t.s.c.SongManagerControllerTest        : Starting SongManagerControllerTest using Java 17.0.4.1 on GILLIANS-MBP.station with PID 44901 (started by gillianmiddleton in /Users/gillianmiddleton/Documents/workspace-spring-tool-suite-4-4.16.0.RELEASE/songmanager)
+2023-04-05 18:40:19.307  INFO 44901 --- [main] e.t.s.c.SongManagerControllerTest        : The following 1 profile is active: "dev"
+2023-04-05 18:40:19.861  INFO 44901 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-05 18:40:19.908  INFO 44901 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interfaces.
+2023-04-05 18:40:20.720  INFO 44901 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-05 18:40:20.757  INFO 44901 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-04-05 18:40:20.793  INFO 44901 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-05 18:40:20.888  INFO 44901 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-05 18:40:21.070  INFO 44901 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-05 18:40:21.095  INFO 44901 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-04-05 18:40:21.456  INFO 44901 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'file:/Users/gillianmiddleton/Documents/workspace-spring-tool-suite-4-4.16.0.RELEASE/songmanager/target/classes/import.sql'
+2023-04-05 18:40:21.466  INFO 44901 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-05 18:40:21.473  INFO 44901 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-05 18:40:21.979  WARN 44901 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-05 18:40:22.189  INFO 44901 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-04-05 18:40:22.414  INFO 44901 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-04-05 18:40:22.414  INFO 44901 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-04-05 18:40:22.415  INFO 44901 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-04-05 18:40:22.433  INFO 44901 --- [main] e.t.s.c.SongManagerControllerTest        : Started SongManagerControllerTest in 3.433 seconds (JVM running for 4.5)
+2023-04-05 18:40:22.640  INFO 44901 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-05 18:40:22.641  INFO 44901 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-04-05 18:40:22.647  INFO 44901 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-05 18:40:22.651  INFO 44901 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-05 18:44:21.826  WARN 45255 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/gillianmiddleton/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/gillianmiddleton/.m2/repository/org/json/json/20160212/json-20160212.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-05 18:44:21.839  INFO 45255 --- [main] e.t.s.c.SongManagerControllerTest        : Starting SongManagerControllerTest using Java 17.0.4.1 on GILLIANS-MBP.station with PID 45255 (started by gillianmiddleton in /Users/gillianmiddleton/Documents/workspace-spring-tool-suite-4-4.16.0.RELEASE/songmanager)
+2023-04-05 18:44:21.840  INFO 45255 --- [main] e.t.s.c.SongManagerControllerTest        : The following 1 profile is active: "dev"
+2023-04-05 18:44:22.326  INFO 45255 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-05 18:44:22.369  INFO 45255 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces.
+2023-04-05 18:44:23.233  INFO 45255 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-05 18:44:23.275  INFO 45255 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-04-05 18:44:23.307  INFO 45255 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-05 18:44:23.410  INFO 45255 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-05 18:44:23.616  INFO 45255 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-05 18:44:23.646  INFO 45255 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-04-05 18:44:24.026  INFO 45255 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'file:/Users/gillianmiddleton/Documents/workspace-spring-tool-suite-4-4.16.0.RELEASE/songmanager/target/classes/import.sql'
+2023-04-05 18:44:24.035  INFO 45255 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-05 18:44:24.043  INFO 45255 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-05 18:44:24.588  WARN 45255 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-05 18:44:24.805  INFO 45255 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-04-05 18:44:25.048  INFO 45255 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-04-05 18:44:25.048  INFO 45255 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-04-05 18:44:25.049  INFO 45255 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-04-05 18:44:25.066  INFO 45255 --- [main] e.t.s.c.SongManagerControllerTest        : Started SongManagerControllerTest in 3.486 seconds (JVM running for 4.461)
+2023-04-05 18:44:25.239  INFO 45255 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-05 18:44:25.239  INFO 45255 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-04-05 18:44:25.243  INFO 45255 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-05 18:44:25.248  INFO 45255 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
