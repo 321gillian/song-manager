@@ -8,4 +8,4 @@ insert into songs (title,artist,bpm,duration,genre) values ('Wagon Wheel','Natha
 insert into songs (title,artist,bpm,duration,genre) values ('Offaly Rover','Brian Whelehan',190,150,'CLASSICAL');
 insert into songs (title,artist,bpm,duration,genre) values ('Rose of Tralee','Anne Doyle',90,250,'FUNK');
 insert into songs (title,artist,bpm,duration,genre) values ('Another One Bites The Dust','Queen',110,230,'ROCK');
-insert into songs (title,artist,bpm,duration,genre) values ('Blanket On The Ground','Philomena Begley',117,102,'COUNTRY');
+insert into songs (title,artist,bpm,duration,genre) values ('Blanket On The Ground','Mattress Mick',117,102,'COUNTRY');
