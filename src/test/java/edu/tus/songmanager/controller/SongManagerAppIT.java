@@ -35,7 +35,6 @@ class SongManagerAppIT {
 	
 
 	@Test
-	@Sql({ "/testdata.sql" })
 	public void createSongSuccessIntTest() {
 		HttpEntity<Song> request = new HttpEntity<Song>(buildSong(), headers);
 		ResponseEntity<String> response = restTemplate.postForEntity("http://localhost:" + port + "/songs", request,
@@ -44,7 +43,6 @@ class SongManagerAppIT {
 	}
 	
 	@Test
-	@Sql({ "/testdata.sql" })
 	public void createSongEmptyFieldsNotAllowedIntTest() {
 		Song song = buildSong();
 		song.setTitle("");
@@ -55,7 +53,6 @@ class SongManagerAppIT {
 	}
 	
 	@Test
-	@Sql({ "/testdata.sql" })
 	public void createSongSlowSongNotAllowedIntTest() {
 		Song song = buildSong();
 		song.setBPM(76);
@@ -67,7 +64,6 @@ class SongManagerAppIT {
 	
 	
 	@Test
-	@Sql({ "/testdata.sql" })
 	public void createSongStairwayDeniedIntTest() {
 		Song song = buildSong();
 		song.setTitle("Stairway to Heaven");
@@ -79,7 +75,6 @@ class SongManagerAppIT {
 	}
 	
 	@Test
-	@Sql({ "/testdata.sql" })
 	public void createSongNotLongerThanBohemianRhapsodyIntTest() {
 		Song song = buildSong();
 		song.setDuration(500);
